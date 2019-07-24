@@ -1,0 +1,41 @@
+.title {
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    font-size: 2.7rem;
+    margin: .1rem 0 2rem 0;
+}
+
+.aboutPic {
+    display: block;
+    margin: 4vh auto;
+    max-height: 25rem;
+}
+
+.aboutMe {
+    margin: 2rem 0 -7rem 0;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+}
+
+.gifPic {
+    display: block;
+    margin: -4vh auto;
+    max-height: 15rem;
+}
+
+.contactMe {
+    display: flex;
+    margin: 2rem 0 2rem 0;
+    text-decoration: none;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactMe:hover {
+    color: #ad3b3b;
+}

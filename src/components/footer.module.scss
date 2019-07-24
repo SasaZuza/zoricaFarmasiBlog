@@ -1,0 +1,19 @@
+.footer {
+    display: flex;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    font-size: .8rem;
+    color: rgb(88, 0, 15);
+    background: #f0edd1;
+    align-items: center;
+    justify-content: center;
+
+    .creator {
+        text-decoration: none;
+        color: rgb(88, 0, 15);
+    }
+
+    .creator:hover {
+        color: #f52525;
+    }
+}

@@ -1,0 +1,43 @@
+.title {
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.postTitle {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+}
+
+.posts {
+    list-style-type: none;
+    margin: 0;
+}
+
+.post {
+    margin: 1rem 0;
+
+    a {
+        background: #f4f4f4;
+        color: #000000;
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background: #efe4e4;
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    p {
+        font-family: 'Caveat', cursive;
+        color: #4d4a4a;
+        font-size: 1rem;
+        font-style: italic;
+    }
+}

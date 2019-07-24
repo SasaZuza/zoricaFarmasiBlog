@@ -1,0 +1,46 @@
+.header {
+    padding: 1rem 0 3rem;
+}
+
+.title {
+    display: flex;
+    font-family: 'Caveat', cursive;
+    color: #550C18;
+    font-size: 3.5rem;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    background: #fccfeb;
+    width: 75%;
+    list-style-type: none;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item {
+    color: rgb(88, 0, 15);
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 1.2rem;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    color: #ad3b3b;
+}
+
+.active-nav-item {
+    color: #f52525;
+}
