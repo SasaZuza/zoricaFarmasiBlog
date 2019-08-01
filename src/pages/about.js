@@ -22,18 +22,21 @@ const AboutPage = () => {
       />
 
       <p className={aboutStyles.aboutMe}>
-        Ovo je mjesto na kome ćete putem mojih nadam se interesantnih blogova
-        :-) saznati mnoge korsine informacije o Farmasi proizvodima i biti u
-        mogućnosti da me konkatirate kako bi ostavrili popuste u slučaju da se
-        odlučite za kupovinu nekih od njih.
+        Živim u Bijeljini, diplomirala sam ekonomiju i uvijek sam voljela da
+        nešto "petljam" oko kozmetike i šminkanja. Između ostalog, bavim se
+        prodajom Farmasi kozmetike. <br />
+        <br />
+        Znanje je najbolja investicija i smatram da treba biti svestran i
+        pronaći neki hobi koji će nas učiniti srećnim, okupirati naše misli i
+        smanjiti nivo stresa, jer toga sigurno ima na pretek. <br /> <br />
+        Toliko o meni.
       </p>
 
       <img src={arrows} className={aboutStyles.gifPic} alt="About Me Picture" />
 
       <p>
         <Link className={aboutStyles.contactMe} to="/contact">
-          U slučaju da želite da me kontaktirate ili da izvršite narudžbu
-          KLIKNITE OVDE!
+          U slučaju da me želite kontaktirati KLIKNITE OVDE!
         </Link>
       </p>
     </Layout>

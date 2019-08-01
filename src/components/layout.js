@@ -1,8 +1,8 @@
-import React from 'react';
-import Footer from '../components/footer';
-import Header from '../components/header';
-import '../styles/index.scss';
-import layoutStyles from './layout.module.scss';
+import React from "react"
+import Footer from "../components/footer"
+import Header from "../components/header"
+import "../styles/index.scss"
+import layoutStyles from "./layout.module.scss"
 
 const Layout = props => {
   // props.children - represents the content inside of that component when it's rendered
@@ -11,7 +11,7 @@ const Layout = props => {
     <div className={layoutStyles.container}>
       <style>
         @import
-        url('https://fonts.googleapis.com/css?family=Caveat&display=swap');
+        url('https://fonts.googleapis.com/css?family=Barriecito|Neucha&display=swap');
       </style>
 
       <div className={layoutStyles.content}>
@@ -20,7 +20,7 @@ const Layout = props => {
       </div>
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
