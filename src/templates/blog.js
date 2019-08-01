@@ -68,6 +68,11 @@ const Blog = props => {
 
   return (
     <Layout>
+      <style>
+        @import
+        url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
+      </style>
+
       <Head title={props.data.contentfulBlogPost.title} />
 
       <h1 className={blogStyles.blogTitle}>

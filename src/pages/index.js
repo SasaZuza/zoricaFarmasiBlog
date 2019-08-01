@@ -28,7 +28,7 @@ const IndexPage = () => {
       <h2 className={indexStyles.aboutMe}>
         Ovo je mjesto na kome ćete putem mojih, nadam se, interesantnih blogova
         saznati više o raznim temama i predstaviću vam kozmetiku koja je dio
-        moje svakodnevnice
+        moje svakodnevnice.
       </h2>
 
       <img src={farmasiLogo} className={indexStyles.logo} alt="Logo" />

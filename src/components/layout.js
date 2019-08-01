@@ -11,7 +11,7 @@ const Layout = props => {
     <div className={layoutStyles.container}>
       <style>
         @import
-        url('https://fonts.googleapis.com/css?family=Barriecito|Neucha&display=swap');
+        url('https://fonts.googleapis.com/css?family=Barrio|Kalam&display=swap');
       </style>
 
       <div className={layoutStyles.content}>
