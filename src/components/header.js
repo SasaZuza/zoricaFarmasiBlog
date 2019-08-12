@@ -6,6 +6,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 // Importing CSS modules - We can give it name like we want to
 import headerStyles from "./header.module.scss"
+import siteLogo from "../profileImg/ulogo.jpg"
 
 const Header = () => {
   // This const allows us to query data with graphql
@@ -22,11 +23,20 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
-      <h2>
-        <Link className={headerStyles.title} to="/">
-          {data.site.siteMetadata.title}
-        </Link>
-      </h2>
+      <div className={headerStyles.headerContainer}>
+        <img
+          src={siteLogo}
+          className={headerStyles.logoSitePic}
+          alt="Profile picture"
+        />
+
+        <div className={headerStyles.headerTitle}>
+          <Link className={headerStyles.title} to="/">
+            {data.site.siteMetadata.title}
+          </Link>
+        </div>
+      </div>
+
       <nav className={headerStyles.menu}>
         <ul className={headerStyles.navList}>
           <li>

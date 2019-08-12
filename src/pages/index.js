@@ -34,7 +34,7 @@ const IndexPage = () => {
       <img src={farmasiLogo} className={indexStyles.logo} alt="Logo" />
 
       <p className={indexStyles.contactText}>
-        Farmasi je kompanije koja nudi širok asortiman proizvoda a ja ću se
+        Farmasi je kompanija koja nudi širok asortiman proizvoda a ja ću se
         potruditi da vam ih približim sa ciljem da i vi saznate zašto je ova
         kozmetika postala tako popularna. <br />
         <img
