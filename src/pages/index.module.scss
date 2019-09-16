@@ -37,3 +37,86 @@
 .contactLink:hover {
     color: #f52525;
 }
+
+
+@media only screen and (min-width: 930px) {
+
+    // Sidebar for lg screens
+    .container {
+        display: flex;
+    }
+
+    .mainContent {
+        flex: 18;
+        order: 1;
+    }
+
+    .sidebar {
+        flex: 5;
+        order: 2;
+        margin-right: 1.5rem;
+
+        .catalogBox {
+            padding: 2rem 0;
+            background: #fddfb5;
+
+            .titleText {
+                text-align: center;
+            }
+
+            .catalogPic {
+                display: block;
+                margin: 1.5rem auto;
+            }
+        }
+
+        .recentPosts {
+            background: #fddfb5;
+            margin-top: 1rem;
+
+            .titleMenu {
+                text-align: center;
+                font-weight: bold;
+                padding: 0.5rem 0.1rem;
+                color: black;
+            }
+
+            .postCard {
+                background: #fcd8a5;
+            }
+
+            .postLinks {
+                text-decoration: none;
+            }
+
+            .postLinks:hover {
+                color: #f52525;
+            }
+
+            .postTitle {
+                margin: 0.15rem 0.15rem;
+                padding: 0.2rem 0.2rem;
+                color: black;
+                text-decoration: none;
+                text-transform: lowercase;
+                font-style: italic;
+            }
+
+            .postTitle::first-letter {
+                text-transform: uppercase;
+            }
+
+            .postTitle:hover {
+                color: #f52525;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 929px) {
+
+    // Sidebar for sm and md screens
+    .sidebar {
+        visibility: hidden;
+    }
+}
