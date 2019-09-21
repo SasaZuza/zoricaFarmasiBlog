@@ -1,11 +1,14 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql, StaticQuery } from "gatsby"
 // This will take json from contentful and render it through Rect component
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
 import blogStyles from "./blog.module.scss"
+import socialStyles from "../components/social.module.scss"
 
 // We in this case use export query so we can use it in out app
 // We use this query for markdown files
@@ -52,6 +55,21 @@ export const query = graphql`
   }
 `
 
+// Ovo je upitno
+// This is how we query recent posts for sidebar menu
+const sidebarQuery = graphql`
+  query {
+    allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      edges {
+        node {
+          title
+          slug
+        }
+      }
+    }
+  }
+`
+
 const Blog = props => {
   // Created object for rendering the image to blog post
   const options = {
@@ -65,6 +83,22 @@ const Blog = props => {
       },
     },
   }
+  // Const for sharing webpage on every single post
+  const baseUrl = "https://zoricafarmasiblog.netlify.com/"
+
+  const postUrl = (
+    <StaticQuery
+      query={sidebarQuery}
+      render={data => (
+        <div>
+          This is post
+          {data.allContentfulBlogPost.edges.map(edge => {
+            return <Link to={`/blog/${edge.node.slug}`}></Link>
+          })}
+        </div>
+      )}
+    />
+  )
 
   return (
     <Layout>
@@ -89,6 +123,21 @@ const Blog = props => {
           props.data.contentfulBlogPost.body.json,
           options
         )}
+      </div>
+
+      {/* Share post on facebook */}
+      <div className={socialStyles.socialContainer}>
+        <h2>Share this on Facebook</h2>
+        <a
+          href={
+            "https://www.facebook.com/sharer/sharer.php?u=" + baseUrl + postUrl
+          }
+          className="facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faFacebook} size="2x" />
+        </a>
       </div>
     </Layout>
   )
