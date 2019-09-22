@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import { DiscussionEmbed } from "disqus-react"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -46,6 +47,7 @@ export const query = graphql`
 export const query = graphql`
   query($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
+      id
       title
       publishedDate(formatString: "MMMM Do, YYYY")
       body {
@@ -70,6 +72,14 @@ const Blog = props => {
   }
   // Const for sharing webpage on every single post
   const baseUrl = "https://zoricafarmasiblog.netlify.com/"
+
+  // Chat
+  const disqusShortname = "https://zoricafarmasiblog.netlify.com/"
+  const disqusConfig = {
+    identifier: props.data.contentfulBlogPost.id,
+    title: props.data.contentfulBlogPost.title,
+    url: baseUrl,
+  }
 
   return (
     <Layout>
@@ -108,6 +118,8 @@ const Blog = props => {
           <FontAwesomeIcon icon={faFacebook} size="2x" />
         </a>
       </div>
+
+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
     </Layout>
   )
 }
