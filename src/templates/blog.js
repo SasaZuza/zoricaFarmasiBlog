@@ -73,8 +73,8 @@ const Blog = props => {
   // Const for sharing webpage on every single post
   const baseUrl = "https://zoricafarmasiblog.netlify.com/"
 
-  // Chat
-  const disqusShortname = "https://zoricafarmasiblog.netlify.com/"
+  // Comment box with Disqus settings
+  const disqusShortname = "https-zoricafarmasiblog-netlify-com"
   const disqusConfig = {
     identifier: props.data.contentfulBlogPost.id,
     title: props.data.contentfulBlogPost.title,
@@ -118,7 +118,7 @@ const Blog = props => {
           <FontAwesomeIcon icon={faFacebook} size="2x" />
         </a>
       </div>
-
+      {/* Adding Disqus tag to add it to this page with parameters */}
       <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
     </Layout>
   )
