@@ -78,7 +78,7 @@ const Blog = props => {
   const disqusConfig = {
     identifier: props.data.contentfulBlogPost.id,
     title: props.data.contentfulBlogPost.title,
-    url: baseUrl,
+    url: baseUrl + props.data.contentfulBlogPost.slug,
   }
 
   return (
