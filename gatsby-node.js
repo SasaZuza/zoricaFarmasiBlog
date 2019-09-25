@@ -68,6 +68,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   // Getting path for template for creating new blog post
   const blogTemplate = path.resolve("./src/templates/blog.js")
+
+  // Page templates
+  const templates = {
+    postList: path.resolve("src/templates/post-list.js"),
+  }
+
   // With 'graphql' argument we access slugs for blog posts
   const res = await graphql(`
     query {
@@ -92,6 +98,33 @@ module.exports.createPages = async ({ graphql, actions }) => {
       // This is objects that connect to slug and gets posts content like title, text ...
       context: {
         slug: edge.node.slug,
+      },
+    })
+  })
+
+  ///////////////////////////////////////////////////////////////////////////////////////
+
+  // Extracting all posts from res
+  const posts = res.data.allContentfulBlogPost.edges
+
+  // Create posts pagination pages
+  const postsPerPage = 2
+  const numberOfPages = Math.ceil(posts.length / postsPerPage)
+
+  Array.from({ length: numberOfPages }).forEach((_, blog) => {
+    const isFirstPage = blog === 0
+    const currentPage = blog + 1
+
+    // Skip first page because of index.js
+    if (isFirstPage) return
+
+    createPage({
+      path: `blog/${currentPage}`,
+      component: templates.postList,
+      context: {
+        limit: postsPerPage,
+        skip: blog * postsPerPage,
+        currentPage,
       },
     })
   })
