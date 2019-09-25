@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
-import BlogPage from "../pages/blog"
-import { graphql } from "gatsby"
+// import BlogPage from "../pages/blog"
+import { graphql, Link } from "gatsby"
+import blogStyles from "../pages/blog.module.scss"
 
 const PostList = props => {
   const posts = props.data.allContentfulBlogPost.edges
@@ -9,9 +10,16 @@ const PostList = props => {
 
   return (
     <Layout pageTitle={`Page: ${currentPage}`}>
-      {posts.map(({ edge }) => (
-        <BlogPage title={edge.node.title} date={edge.node.publishedDate} />
-      ))}
+      <ol className={blogStyles.posts}>
+        {posts.map(({ node }) => (
+          <li className={blogStyles.post}>
+            <Link to={`/blog/${node.slug}`}>
+              <h2 className={blogStyles.postTitle}> {node.title} </h2>
+              <p> {node.publishedDate} </p>
+            </Link>
+          </li>
+        ))}
+      </ol>
     </Layout>
   )
 }

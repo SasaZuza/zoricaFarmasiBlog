@@ -108,7 +108,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const posts = res.data.allContentfulBlogPost.edges
 
   // Create posts pagination pages
-  const postsPerPage = 2
+  const postsPerPage = 4
   const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
   Array.from({ length: numberOfPages }).forEach((_, blog) => {
@@ -119,7 +119,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     if (isFirstPage) return
 
     createPage({
-      path: `blog/${currentPage}`,
+      path: `/${currentPage}`,
       component: templates.postList,
       context: {
         limit: postsPerPage,
