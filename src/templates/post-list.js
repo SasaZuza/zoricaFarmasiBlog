@@ -1,16 +1,18 @@
 import React from "react"
 import Layout from "../components/layout"
-// import BlogPage from "../pages/blog"
+
 import { graphql, Link } from "gatsby"
 import blogStyles from "../pages/blog.module.scss"
 
+// Creating component that will show post on new page after setting pagination
 const PostList = props => {
+  // Accessing data from query defined bellow
   const posts = props.data.allContentfulBlogPost.edges
-  // const { currentPage } = props.pageContext
 
   return (
     <Layout>
       <ol className={blogStyles.posts}>
+        {/* Looping through post and setting pagination  */}
         {posts.map(({ node }) => (
           <li className={blogStyles.post}>
             <Link to={`/blog/${node.slug}`}>
@@ -24,6 +26,7 @@ const PostList = props => {
   )
 }
 
+// Query to access posts from contentful
 export const postListQuery = graphql`
   query postListQuery($skip: Int!, $limit: Int!) {
     allContentfulBlogPost(

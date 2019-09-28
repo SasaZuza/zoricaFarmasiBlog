@@ -100,32 +100,33 @@ module.exports.createPages = async ({ graphql, actions }) => {
         slug: edge.node.slug,
       },
     })
-  })
 
-  ///////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////
+    // Extracting all posts from res
+    const posts = res.data.allContentfulBlogPost.edges
 
-  // Extracting all posts from res
-  const posts = res.data.allContentfulBlogPost.edges
+    // Create posts pagination pages
+    const postsPerPage = 5
+    const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
-  // Create posts pagination pages
-  const postsPerPage = 3
-  const numberOfPages = Math.ceil(posts.length / postsPerPage)
+    // This is how we loop through array of pages depending of number of posts on it
+    Array.from({ length: numberOfPages }).forEach((_, blog) => {
+      const isFirstPage = blog === 0
+      const currentPage = blog + 1
 
-  Array.from({ length: numberOfPages }).forEach((_, blog) => {
-    const isFirstPage = blog === 0
-    const currentPage = blog + 1
+      // Skip first page because of blog.js is already set
+      if (isFirstPage) return
 
-    // Skip first page because of index.js
-    if (isFirstPage) return
-
-    createPage({
-      path: `/${currentPage}`,
-      component: templates.postList,
-      context: {
-        limit: postsPerPage,
-        skip: blog * postsPerPage,
-        currentPage,
-      },
+      // Setting page characteristics
+      createPage({
+        path: `/${currentPage}`,
+        component: templates.postList,
+        context: {
+          limit: postsPerPage,
+          skip: blog * postsPerPage,
+          currentPage,
+        },
+      })
     })
   })
 }

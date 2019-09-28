@@ -32,7 +32,10 @@ const BlogPage = () => {
   // In this case we access data from contentful app and display content
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+      allContentfulBlogPost(
+        sort: { fields: publishedDate, order: DESC }
+        limit: 5
+      ) {
         edges {
           node {
             title
