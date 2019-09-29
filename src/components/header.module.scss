@@ -12,6 +12,11 @@
     vertical-align: middle;
 }
 
+.title:hover {
+    text-decoration: none;
+    color: #550c18;
+}
+
 .menu {
     display: flex;
     align-items: center;

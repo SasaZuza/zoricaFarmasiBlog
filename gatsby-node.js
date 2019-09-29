@@ -119,12 +119,13 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
       // Setting page characteristics
       createPage({
-        path: `/${currentPage}`,
+        path: `/page/${currentPage}`,
         component: templates.postList,
         context: {
           limit: postsPerPage,
           skip: blog * postsPerPage,
           currentPage,
+          numberOfPages,
         },
       })
     })

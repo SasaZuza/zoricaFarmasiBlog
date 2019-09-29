@@ -3,11 +3,13 @@ import Layout from "../components/layout"
 
 import { graphql, Link } from "gatsby"
 import blogStyles from "../pages/blog.module.scss"
+import PaginationLinks from "../components/paginationLinks"
 
 // Creating component that will show post on new page after setting pagination
 const PostList = props => {
   // Accessing data from query defined bellow
   const posts = props.data.allContentfulBlogPost.edges
+  const { currentPage, numberOfPages } = props.pageContext
 
   return (
     <Layout>
@@ -22,6 +24,10 @@ const PostList = props => {
           </li>
         ))}
       </ol>
+      <PaginationLinks
+        currentPage={currentPage}
+        numberOfPages={numberOfPages}
+      />
     </Layout>
   )
 }

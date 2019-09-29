@@ -17,6 +17,7 @@
 
 .post {
     margin: 1rem 0;
+    text-decoration: none;
 
     a {
         background: #f4f4f4;
@@ -28,6 +29,8 @@
 
     a:hover {
         background: #efe4e4;
+        text-decoration: none;
+        color: #ad3b3b;
     }
 
     h2 {
