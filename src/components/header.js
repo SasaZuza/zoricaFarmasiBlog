@@ -1,9 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-// Importing .scss file with basic styles
-// import "./header.module.scss"
-
 // Importing CSS modules - We can give it name like we want to
 import headerStyles from "./header.module.scss"
 import siteLogo from "../profileImg/ulogo.jpg"
@@ -23,11 +20,12 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
+      {/* Logo picture and site title */}
       <div className={headerStyles.headerContainer}>
         <img
           src={siteLogo}
           className={headerStyles.logoSitePic}
-          alt="Profile picture"
+          alt="Sminkoholicarka"
         />
 
         <div className={headerStyles.headerTitle}>

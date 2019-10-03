@@ -1,82 +1,101 @@
+// Logo and page title styling for large screen
 .header {
     padding: 1rem 0 3rem;
-}
+    text-align: center;
 
-.title {
-    display: flex;
-    font-family: 'Lobster', cursive;
-    color: #550c18;
-    font-size: 3.3rem;
-    font-weight: bold;
-    text-decoration: none;
-    vertical-align: middle;
-}
-
-.title:hover {
-    text-decoration: none;
-    color: #550c18;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-list {
-    display: flex;
-    background: #fddfb5;
-    width: 75%;
-    list-style-type: none;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-item {
-    color: rgb(88, 0, 15);
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-right: 1.2rem;
-    text-decoration: none;
-}
-
-.nav-item:hover {
-    color: #ad3b3b;
-}
-
-.active-nav-item {
-    color: #f52525;
-}
-
-.headerContainer {
-    .logoSitePic {
-        display: inline-block;
-        height: 5rem;
-        width: 5rem;
-        padding: 0 0 0 0;
-        margin: 0 1.5rem 0 0;
-    }
-
-    .headerTitle {
-        display: inline-block;
-        vertical-align: middle;
-        padding: 0 0 3.5rem 0;
-    }
-}
-
-@media only screen and (max-width: 765px) {
     .headerContainer {
-        text-align: center;
+        padding-bottom: 1.5rem;
+        vertical-align: middle;
 
-        .title {
-            font-size: 2.3rem;
-        }
 
         .logoSitePic {
-            display: block;
-            margin: 4vh auto;
+            display: inline-block;
+            max-height: 5rem;
+            max-width: 5rem;
+            padding: 0;
+            margin: 0 1.5rem 0 0;
+        }
+
+        .headerTitle {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 0 0.5rem 0;
+
+            .title {
+                display: flex;
+                font-family: 'Lobster', cursive;
+                color: #36030c;
+                font-size: 3.3rem;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .title:hover {
+                text-decoration: none;
+                color: #36030c;
+            }
+        }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // Navbar styling for large screens
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .nav-list {
+            display: flex;
+            background: #f8d7a9;
+            width: 80%;
+            list-style-type: none;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-item {
+            color: #36030c;
+            font-family: 'Courgette', cursive;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-right: 1.3rem;
+            text-decoration: none;
+        }
+
+        .active-nav-item {
+            color: #e02424;
+        }
+
+        .nav-item:hover {
+            color: #c45656;
+        }
+    }
+}
+
+
+// Setup for smaller screens
+@media only screen and (max-width: 425px) {
+
+    // Logo and page title
+    .header {
+        .headerContainer {
+            .headerTitle {
+                .title {
+                    font-size: 2.1rem;
+                }
+            }
+        }
+
+        // Navbar
+        .menu {
+            .nav-list {
+                width: 95%;
+            }
+
+            .nav-item {
+                font-size: 1.1rem;
+            }
         }
     }
 }

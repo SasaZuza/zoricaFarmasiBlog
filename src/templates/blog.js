@@ -11,36 +11,6 @@ import Head from "../components/head"
 import blogStyles from "./blog.module.scss"
 import socialStyles from "../components/social.module.scss"
 
-// We in this case use export query so we can use it in out app
-// We use this query for markdown files
-/*
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        date
-      }
-      html
-    }
-  }
-`
-*/
-
-// const Blog = props => {
-//   return (
-//     <Layout>
-//       {/* This is how we render to screen title and date of the blog */}
-//       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-//       <p>{props.data.markdownRemark.frontmatter.date}</p>
-//       {/* This is how we render html inside <div> */}
-//       <div
-//         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-//       ></div>
-//     </Layout>
-//   )
-// }
-
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 // This is query for contentful

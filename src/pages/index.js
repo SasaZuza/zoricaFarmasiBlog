@@ -5,9 +5,9 @@ import { Link, graphql, StaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import SocialFollow from "../components/social"
+import CarouselSlide from "../components/carousel"
 
 import indexStyles from "./index.module.scss"
-import profileImg from "../profileImg/profileImg.jpg"
 import farmasiLogo from "../profileImg/logo.jpg"
 import farmasiProducts from "../profileImg/products.jpg"
 import catalogImg from "../profileImg/catalog.png"
@@ -20,27 +20,24 @@ const IndexPage = () => {
           <Head title="Home" />
 
           <h1 className={indexStyles.headTitle}>
-            Hej, zdravo, ja sam Zorica i ovo je moj blog. Dobrodošli!
+            Pozdrav svima, ja sam Zorica, veliki ljubitelj kozmetike.
           </h1>
+          <h1 className={indexStyles.headTitle}>Dobrodošli na moj blog! </h1>
 
-          <img
-            src={profileImg}
-            className={indexStyles.profilePic}
-            alt="Profile picture"
-          />
+          <CarouselSlide />
 
-          <h2 className={indexStyles.aboutMe}>
-            Ovo je mjesto na kome ćete putem mojih, nadam se, interesantnih
-            blogova saznati više o raznim temama i predstaviću vam kozmetiku
-            koja je dio moje svakodnevnice.
-          </h2>
+          <p className={indexStyles.aboutMe}>
+            Ovde ću vam putem mojih, nadam se interesantnih blogova predstaviti
+            kozmetiku koja je dio moje svakodnevnice, a biće riječi i o drugim
+            interesantnim temama.
+          </p>
 
           <img src={farmasiLogo} className={indexStyles.logo} alt="Logo" />
 
           <p className={indexStyles.contactText}>
-            Farmasi je kompanija koja nudi širok asortiman proizvoda a ja ću se
+            Farmasi je kompanija koja nudi širok asortiman proizvoda, a ja ću se
             potruditi da vam ih približim sa ciljem da i vi saznate zašto je ova
-            kozmetika postala tako popularna. <br />
+            kozmetika postala toliko popularna. <br />
             <img
               src={farmasiProducts}
               className={indexStyles.products}
@@ -60,11 +57,11 @@ const IndexPage = () => {
 
       {/* This is start of sidebar */}
       <div className={indexStyles.sidebar}>
-        <div className={indexStyles.catalogBox}>
-          <h3 className={indexStyles.titleText}>
+        <Card className={indexStyles.catalogBox}>
+          <h4 className={indexStyles.titleText}>
             {" "}
             Pogledajte novi FARMASI katalog{" "}
-          </h3>
+          </h4>
 
           <a
             href="https://www.farmasi.ba/index.php/septembar#minebook/4"
@@ -73,15 +70,15 @@ const IndexPage = () => {
             <img
               src={catalogImg}
               className={indexStyles.catalogPic}
-              alt="Catalog picture"
+              alt="Catalog"
             />
           </a>
-        </div>
+        </Card>
 
         {/* This is sidebar for recent posts */}
         <Card className={indexStyles.recentPosts}>
           <CardBody>
-            <h3 className={indexStyles.titleMenu}>Najnoviji blogovi:</h3>
+            <h4 className={indexStyles.titleMenu}>Najnoviji blogovi:</h4>
             <StaticQuery
               query={sidebarQuery}
               render={data => (

@@ -24,6 +24,7 @@ const Footer = () => {
           className={footerStyles.creator}
           href="https://sasa-portfolio-page.netlify.com/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           {data.site.siteMetadata.author}
         </a>

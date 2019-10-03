@@ -1,6 +1,6 @@
 .container {
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 86%;
     padding: 1rem;
     background-color: #f1e1ae;
     background-image: linear-gradient(39deg, #d4cebf 0%, #fddfb5 100%);
@@ -14,8 +14,8 @@
 }
 
 // Container size for md and sm screens
-@media only screen and (min-width: 930px) {
+@media only screen and (max-width: 425px) {
     .container {
-        max-width: 80%;
+        max-width: 95%;
     }
 }

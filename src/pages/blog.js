@@ -8,28 +8,6 @@ import PaginationLinks from "../components/paginationLinks"
 
 const BlogPage = () => {
   // This const allows us to query data with graphql
-  // In this case we access title and date from markdown files in 'components/posts' directory
-  /*
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              title
-              date
-            }
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
-  */
-
-  // This const allows us to query data with graphql
   // In this case we access data from contentful app and display content
   const data = useStaticQuery(graphql`
     query {
@@ -57,19 +35,6 @@ const BlogPage = () => {
     <Layout>
       <Head title="My Blogs" />
       <h1 className={blogStyles.title}>Moji blog postovi:</h1>
-      {/* This is how we access those markdown files and display title and date of the posts */}
-      {/* <ol className={blogStyles.posts}>
-        {data.allMarkdownRemark.edges.map(edge => {
-          return (
-            <li className={blogStyles.post}>
-              <Link to={`/blog/${edge.node.fields.slug}`}>
-                <h2> {edge.node.frontmatter.title} </h2>
-                <p> {edge.node.frontmatter.date} </p>
-              </Link>
-            </li>
-          )
-        })}
-      </ol> */}
 
       {/* This is how we access contentful data and display it */}
       <ol className={blogStyles.posts}>
