@@ -58,13 +58,13 @@ const IndexPage = () => {
       {/* This is start of sidebar */}
       <div className={indexStyles.sidebar}>
         <Card className={indexStyles.catalogBox}>
-          <h4 className={indexStyles.titleText}>
+          <CardTitle className={indexStyles.titleText}>
             {" "}
-            Pogledajte novi FARMASI katalog{" "}
-          </h4>
+            Pogledajte FARMASI katalog{" "}
+          </CardTitle>
 
           <a
-            href="https://www.farmasi.ba/index.php/septembar#minebook/4"
+            href="https://www.farmasi.ba/index.php/oktobar#minebook/1"
             target="_blank"
           >
             <img
@@ -78,7 +78,9 @@ const IndexPage = () => {
         {/* This is sidebar for recent posts */}
         <Card className={indexStyles.recentPosts}>
           <CardBody>
-            <h4 className={indexStyles.titleMenu}>Najnoviji blogovi:</h4>
+            <CardTitle className={indexStyles.titleMenu}>
+              Najnoviji blogovi:
+            </CardTitle>
             <StaticQuery
               query={sidebarQuery}
               render={data => (

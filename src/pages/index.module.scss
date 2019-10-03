@@ -1,3 +1,4 @@
+// Styling of main window for large screens
 .headTitle {
     font-family: "Courgette", cursive;
     color: black;
@@ -42,6 +43,29 @@
     text-decoration: none;
 }
 
+// MAin window for smaller screens
+@media only screen and (max-width: 425px) {
+    .headTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .headTitle {
+        font-size: 1.6rem;
+    }
+
+    .aboutMe {
+        font-size: 1.2rem;
+    }
+
+    .contactText {
+        font-size: 1.2rem;
+    }
+}
+
+
+// Styling of the sidebar
 @media only screen and (min-width: 930px) {
 
     // Sidebar for lg screens
@@ -60,40 +84,48 @@
         margin-right: 1.5rem;
 
         .catalogBox {
-            padding: 2rem 0;
+            padding: 1.5rem 0;
             background: #fddfb5;
+            border-color: #fab758;
 
             .titleText {
                 text-align: center;
+                font-family: "Courgette", cursive;
+                font-weight: bold;
+                font-size: 1.1rem;
             }
 
             .catalogPic {
                 display: block;
-                margin: 1.5rem auto;
+                margin: 0.9rem auto;
             }
         }
 
         .recentPosts {
             background: #fddfb5;
             margin-top: 1rem;
+            border-color: #fab758;
 
             .titleMenu {
                 text-align: center;
+                font-family: "Courgette", cursive;
                 font-weight: bold;
-                padding: 0.5rem 0.1rem;
+                font-size: 1.1rem;
+                padding: 0 0.3rem;
                 color: black;
             }
 
             .postCard {
-                background: #fcd8a5;
+                background: #f8d7a9;
             }
 
             .postLinks {
+                font-family: "Courgette", cursive;
                 text-decoration: none;
             }
 
             .postLinks:hover {
-                color: #f52525;
+                color: #c45656;
             }
 
             .postTitle {
@@ -102,7 +134,7 @@
                 color: black;
                 text-decoration: none;
                 text-transform: lowercase;
-                font-style: italic;
+
             }
 
             .postTitle::first-letter {
@@ -110,15 +142,14 @@
             }
 
             .postTitle:hover {
-                color: #f52525;
+                color: #c45656;
             }
         }
     }
 }
 
+// Sidebar for sm and md screens
 @media only screen and (max-width: 929px) {
-
-    // Sidebar for sm and md screens
     .sidebar {
         visibility: hidden;
     }
