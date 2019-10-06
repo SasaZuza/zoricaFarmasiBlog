@@ -1,16 +1,15 @@
 import React from "react"
-import { Card, CardTitle, CardBody } from "reactstrap"
-import { Link, graphql, StaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
 import SocialFollow from "../components/social"
 import CarouselSlide from "../components/carousel"
+import Sidebar from "../components/sidebar"
 
 import indexStyles from "./index.module.scss"
 import farmasiLogo from "../profileImg/logo.jpg"
 import farmasiProducts from "../profileImg/products.jpg"
-import catalogImg from "../profileImg/catalog.png"
 
 const IndexPage = () => {
   return (
@@ -55,77 +54,10 @@ const IndexPage = () => {
         </Layout>
       </div>
 
-      {/* This is start of sidebar */}
-      <div className={indexStyles.sidebar}>
-        <Card className={indexStyles.catalogBox}>
-          <CardTitle className={indexStyles.titleText}>
-            {" "}
-            Pogledajte FARMASI katalog{" "}
-          </CardTitle>
-
-          <a
-            href="https://www.farmasi.ba/index.php/oktobar#minebook/1"
-            target="_blank"
-          >
-            <img
-              src={catalogImg}
-              className={indexStyles.catalogPic}
-              alt="Catalog"
-            />
-          </a>
-        </Card>
-
-        {/* This is sidebar for recent posts */}
-        <Card className={indexStyles.recentPosts}>
-          <CardBody>
-            <CardTitle className={indexStyles.titleMenu}>
-              Najnoviji blogovi:
-            </CardTitle>
-            <StaticQuery
-              query={sidebarQuery}
-              render={data => (
-                <div>
-                  {data.allContentfulBlogPost.edges.map(edge => {
-                    return (
-                      <CardTitle className={indexStyles.postCard}>
-                        <Link
-                          to={`/blog/${edge.node.slug}`}
-                          className={indexStyles.postLinks}
-                        >
-                          <p className={indexStyles.postTitle}>
-                            {" "}
-                            {edge.node.title}{" "}
-                          </p>
-                        </Link>
-                      </CardTitle>
-                    )
-                  })}
-                </div>
-              )}
-            />
-          </CardBody>
-        </Card>
-      </div>
+      {/* Used Sidebar component  */}
+      <Sidebar />
     </div>
   )
 }
-
-// This is how we query recent posts for sidebar menu
-const sidebarQuery = graphql`
-  query {
-    allContentfulBlogPost(
-      sort: { fields: publishedDate, order: DESC }
-      limit: 5
-    ) {
-      edges {
-        node {
-          title
-          slug
-          publishedDate(formatString: "MMMM Do, YYYY")
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

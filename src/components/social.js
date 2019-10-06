@@ -10,6 +10,7 @@ export default function SocialFollow() {
       <a
         href="https://www.facebook.com/zorica.farmasi.3"
         target="_blank"
+        rel="noopener noreferrer"
         className={socialStyles.facebookSocial}
       >
         <FontAwesomeIcon icon={faFacebook} size="2x" />
@@ -18,6 +19,7 @@ export default function SocialFollow() {
       <a
         href="https://www.instagram.com/dnevnik_sminkoholicarke/"
         target="_blank"
+        rel="noopener noreferrer"
         className={socialStyles.instagramSocial}
       >
         <FontAwesomeIcon icon={faInstagram} size="2x" />

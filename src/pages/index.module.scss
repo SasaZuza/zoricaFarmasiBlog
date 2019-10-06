@@ -1,4 +1,5 @@
 // Styling of main window for large screens
+
 .headTitle {
     font-family: "Courgette", cursive;
     color: black;
@@ -55,10 +56,7 @@
         font-size: 1.6rem;
     }
 
-    .aboutMe {
-        font-size: 1.2rem;
-    }
-
+    .aboutMe,
     .contactText {
         font-size: 1.2rem;
     }
@@ -71,6 +69,7 @@
     // Sidebar for lg screens
     .container {
         display: flex;
+        border-color: #fab758;
     }
 
     .mainContent {
@@ -150,6 +149,11 @@
 
 // Sidebar for sm and md screens
 @media only screen and (max-width: 929px) {
+
+    .mainContent {
+        margin-bottom: -25rem;
+    }
+
     .sidebar {
         visibility: hidden;
     }
