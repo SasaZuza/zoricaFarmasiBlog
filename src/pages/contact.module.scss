@@ -1,8 +1,8 @@
 .title {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Courgette", cursive;
     text-align: center;
-    font-size: 2.4rem;
-    margin: 1rem 0 2rem 0;
+    font-size: 1.8rem;
+    margin: .1rem 0 2rem 0;
 }
 
 .orderPic {
@@ -13,8 +13,25 @@
 
 .order {
     margin: 5rem 0 2rem 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-family: "Courgette", cursive;
+    font-size: 1.4rem;
     color: black;
     text-align: center;
+}
+
+// Styling for smaller screens
+@media only screen and (max-width: 425px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .order {
+        font-size: 1.2rem;
+    }
 }

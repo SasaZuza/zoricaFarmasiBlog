@@ -15,11 +15,7 @@ const NotFound = () => {
 
       <h1 className={ErrorStyles.errorTitle}>Page not found</h1>
 
-      <img
-        className={ErrorStyles.errorPic}
-        src={errorImg}
-        alt="Error picture"
-      />
+      <img className={ErrorStyles.errorPic} src={errorImg} alt="Error" />
 
       <p className={ErrorStyles.errorParagraph}>
         <Link className={ErrorStyles.errorLink} to="/">

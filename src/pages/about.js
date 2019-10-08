@@ -50,7 +50,7 @@ const AboutPage = () => {
           </p>
         </Layout>
       </div>
-
+      {/* Adding sidebar component */}
       <Sidebar />
     </div>
   )
