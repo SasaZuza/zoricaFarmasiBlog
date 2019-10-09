@@ -2,9 +2,12 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import blogStyles from "./blog.module.scss"
 import Head from "../components/head"
 import PaginationLinks from "../components/paginationLinks"
+import Sidebar from "../components/sidebar"
+
+import blogStyles from "./blog.module.scss"
+import indexStyles from "./index.module.scss"
 
 const BlogPage = () => {
   // This const allows us to query data with graphql
@@ -32,31 +35,40 @@ const BlogPage = () => {
   let numberOfPages
 
   return (
-    <Layout>
-      <Head title="My Blogs" />
-      <h1 className={blogStyles.title}>Moji blog postovi:</h1>
+    <div className={indexStyles.container}>
+      <div className={indexStyles.mainContent}>
+        <Layout>
+          <Head title="My Blogs" />
+          <h1 className={blogStyles.title}>Moji blog postovi:</h1>
 
-      {/* This is how we access contentful data and display it */}
-      <ol className={blogStyles.posts}>
-        {data.allContentfulBlogPost.edges.map(edge => {
-          {
-            /* Calculating number of pages */
-          }
-          numberOfPages = Math.ceil(
-            data.allContentfulBlogPost.totalCount / postsPerPage
-          )
-          return (
-            <li className={blogStyles.post}>
-              <Link to={`/blog/${edge.node.slug}`}>
-                <h2 className={blogStyles.postTitle}> {edge.node.title} </h2>
-                <p> {edge.node.publishedDate} </p>
-              </Link>
-            </li>
-          )
-        })}
-        <PaginationLinks currentPage={1} numberOfPages={numberOfPages} />
-      </ol>
-    </Layout>
+          {/* This is how we access contentful data and display it */}
+          <ol className={blogStyles.posts}>
+            {data.allContentfulBlogPost.edges.map(edge => {
+              {
+                /* Calculating number of pages */
+              }
+              numberOfPages = Math.ceil(
+                data.allContentfulBlogPost.totalCount / postsPerPage
+              )
+              return (
+                <li className={blogStyles.post}>
+                  <Link to={`/blog/${edge.node.slug}`}>
+                    <h2 className={blogStyles.postTitle}>
+                      {" "}
+                      {edge.node.title}{" "}
+                    </h2>
+                    <p> {edge.node.publishedDate} </p>
+                  </Link>
+                </li>
+              )
+            })}
+            <PaginationLinks currentPage={1} numberOfPages={numberOfPages} />
+          </ol>
+        </Layout>
+      </div>
+      {/* Adding sidebar component */}
+      <Sidebar />
+    </div>
   )
 }
 

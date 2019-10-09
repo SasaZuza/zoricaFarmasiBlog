@@ -1,13 +1,13 @@
 .title {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Courgette", cursive;
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
 }
 
 .postTitle {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.7rem;
+    font-family: "Courgette", cursive;
+    font-size: 1.5rem;
 }
 
 .posts {
@@ -20,7 +20,7 @@
     text-decoration: none;
 
     a {
-        background: #f4f4f4;
+        background: #f8d7a9;
         color: #000000;
         display: block;
         padding: 1rem;
@@ -30,7 +30,7 @@
     a:hover {
         background: #efe4e4;
         text-decoration: none;
-        color: #ad3b3b;
+        color: #c45656;
     }
 
     h2 {
@@ -38,9 +38,30 @@
     }
 
     p {
-        font-family: 'Roboto', sans-serif;
+        font-family: "Courgette", cursive;
         color: #4d4a4a;
         font-size: 1rem;
         font-style: italic;
+    }
+}
+
+// Styling for smaller screens
+@media only screen and (max-width: 425px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .postTitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .postTitle {
+        font-size: 1.4rem;
     }
 }
