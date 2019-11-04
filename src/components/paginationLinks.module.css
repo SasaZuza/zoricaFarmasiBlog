@@ -1,0 +1,14 @@
+.item {
+  font-family: "Courgette", cursive;
+  background: #f8d7a9;
+}
+
+.paginationbtn {
+  background: #f8d7a9;
+  color: black;
+}
+
+.paginationbtn:hover {
+  color: #c45656;
+}
+/*# sourceMappingURL=paginationLinks.module.css.map */

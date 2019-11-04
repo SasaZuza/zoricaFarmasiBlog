@@ -1,0 +1,23 @@
+.blogTitle {
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-align: center;
+  padding-bottom: 1.2rem;
+}
+
+.published {
+  text-align: right;
+  font-style: italic;
+  padding-bottom: 1.2rem;
+}
+
+.blogContent {
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.blogImage {
+  display: block;
+  margin: 5vh auto;
+}
+/*# sourceMappingURL=blog.module.css.map */

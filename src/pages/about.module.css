@@ -1,0 +1,65 @@
+.title {
+  font-family: "Courgette", cursive;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: .1rem 0 2rem 0;
+}
+
+.aboutPic {
+  display: block;
+  margin: 4vh auto;
+  max-height: 30rem;
+}
+
+.aboutMe {
+  margin: 2rem 0 2rem 0;
+  font-family: "Courgette", cursive;
+  font-size: 1.4rem;
+  color: black;
+  text-align: center;
+}
+
+.gifPic {
+  display: block;
+  margin: -8vh auto;
+  max-height: 15rem;
+}
+
+.contactMeText {
+  margin: 2rem 0 2rem 0;
+  font-family: "Courgette", cursive;
+  font-size: 1.4rem;
+  color: black;
+  text-align: center;
+}
+
+.contactMeLink {
+  margin: 2rem 0 1rem 0;
+  text-decoration: none;
+  font-family: "Courgette", cursive;
+  font-size: 1.4rem;
+  color: black;
+  text-align: center;
+}
+
+.contactMeLink:hover {
+  text-decoration: none;
+  color: #c45656;
+}
+
+@media only screen and (max-width: 425px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .aboutMe,
+  .contactMeText {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=about.module.css.map */

@@ -16,7 +16,7 @@ const Sidebar = () => {
         </CardTitle>
 
         <a
-          href="https://www.farmasi.ba/index.php/oktobar#minebook/1"
+          href="https://www.farmasi.ba/index.php/novembar#minebook/1"
           rel="noopener noreferrer"
           target="_blank"
         >

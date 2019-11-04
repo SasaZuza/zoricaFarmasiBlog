@@ -1,0 +1,65 @@
+.title {
+  font-family: "Courgette", cursive;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.postTitle {
+  font-family: "Courgette", cursive;
+  font-size: 1.5rem;
+}
+
+.posts {
+  list-style-type: none;
+  margin: 0;
+}
+
+.post {
+  margin: 1rem 0;
+  text-decoration: none;
+}
+
+.post a {
+  background: #f8d7a9;
+  color: #000000;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.post a:hover {
+  background: #efe4e4;
+  text-decoration: none;
+  color: #c45656;
+}
+
+.post h2 {
+  margin-bottom: 0;
+}
+
+.post p {
+  font-family: "Courgette", cursive;
+  color: #4d4a4a;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+@media only screen and (max-width: 425px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .postTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .postTitle {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=blog.module.css.map */

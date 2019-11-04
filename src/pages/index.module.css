@@ -1,0 +1,146 @@
+.headTitle {
+  font-family: "Courgette", cursive;
+  color: black;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.profilePic {
+  display: block;
+  margin: 5vh auto;
+  max-height: 600px;
+  max-width: 65%;
+}
+
+.aboutMe {
+  font-family: "Courgette", cursive;
+  color: black;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.logo,
+.products {
+  display: block;
+  margin: 5vh auto;
+}
+
+.contactText {
+  font-family: "Courgette", cursive;
+  font-size: 1.4rem;
+  color: black;
+  text-align: center;
+}
+
+.contactLink {
+  text-decoration: none;
+  color: black;
+}
+
+.contactLink:hover {
+  color: #c45656;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 425px) {
+  .headTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .headTitle {
+    font-size: 1.6rem;
+  }
+  .aboutMe,
+  .contactText {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 930px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-color: #fab758;
+  }
+  .mainContent {
+    -webkit-box-flex: 18;
+        -ms-flex: 18;
+            flex: 18;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .sidebar {
+    -webkit-box-flex: 5;
+        -ms-flex: 5;
+            flex: 5;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-right: 1.5rem;
+  }
+  .sidebar .catalogBox {
+    padding: 1.5rem 0;
+    background: #fddfb5;
+    border-color: #fab758;
+  }
+  .sidebar .catalogBox .titleText {
+    text-align: center;
+    font-family: "Courgette", cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .sidebar .catalogBox .catalogPic {
+    display: block;
+    margin: 0.9rem auto;
+  }
+  .sidebar .recentPosts {
+    background: #fddfb5;
+    margin-top: 1rem;
+    border-color: #fab758;
+  }
+  .sidebar .recentPosts .titleMenu {
+    text-align: center;
+    font-family: "Courgette", cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0 0.3rem;
+    color: black;
+  }
+  .sidebar .recentPosts .postCard {
+    background: #f8d7a9;
+  }
+  .sidebar .recentPosts .postLinks {
+    font-family: "Courgette", cursive;
+    text-decoration: none;
+  }
+  .sidebar .recentPosts .postLinks:hover {
+    color: #c45656;
+  }
+  .sidebar .recentPosts .postTitle {
+    margin: 0.15rem 0.15rem;
+    padding: 0.2rem 0.2rem;
+    color: black;
+    text-decoration: none;
+    text-transform: lowercase;
+  }
+  .sidebar .recentPosts .postTitle::first-letter {
+    text-transform: uppercase;
+  }
+  .sidebar .recentPosts .postTitle:hover {
+    color: #c45656;
+  }
+}
+
+@media only screen and (max-width: 929px) {
+  .mainContent {
+    margin-bottom: -25rem;
+  }
+  .sidebar {
+    visibility: hidden;
+  }
+}
+/*# sourceMappingURL=index.module.css.map */

@@ -1,0 +1,31 @@
+.socialContainer {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.socialContainer a {
+  margin: 0 .5rem;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  display: inline-block;
+}
+
+.socialContainer a:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+
+.facebookSocial {
+  color: #4968ad;
+}
+
+.instagramSocial {
+  color: black;
+}
+
+.titleShare {
+  padding-top: 3rem;
+}
+/*# sourceMappingURL=social.module.css.map */

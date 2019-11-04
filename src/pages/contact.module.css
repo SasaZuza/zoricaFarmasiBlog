@@ -1,0 +1,36 @@
+.title {
+  font-family: "Courgette", cursive;
+  text-align: center;
+  font-size: 1.8rem;
+  margin: .1rem 0 2rem 0;
+}
+
+.orderPic {
+  display: block;
+  margin: 4vh auto;
+  width: 100%;
+}
+
+.order {
+  margin: 5rem 0 2rem 0;
+  font-family: "Courgette", cursive;
+  font-size: 1.4rem;
+  color: black;
+  text-align: center;
+}
+
+@media only screen and (max-width: 425px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .order {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=contact.module.css.map */
