@@ -54,7 +54,7 @@ const Header = () => {
               activeClassName={headerStyles.activeNavItem}
               to="/blog"
             >
-              Moj Blog
+              Blog
             </Link>
           </li>
           <li>
@@ -65,6 +65,20 @@ const Header = () => {
             >
               O meni
             </Link>
+          </li>
+          <li>
+            <div>
+              <a
+                className={headerStyles.navItem}
+                activeClassName={headerStyles.activeNavItem}
+                href="https://sminkoholicarka-e-shop.netlify.com/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {" "}
+                E-Shop
+              </a>
+            </div>
           </li>
           <li>
             <Link

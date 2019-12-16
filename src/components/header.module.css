@@ -26,7 +26,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   color: #36030c;
   font-size: 3.3rem;
   font-weight: bold;
@@ -43,11 +43,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .header .menu .nav-list {
@@ -59,16 +59,16 @@
   list-style-type: none;
   margin: 0;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .header .menu .nav-item {
   color: #36030c;
-  font-family: 'Courgette', cursive;
+  font-family: "Courgette", cursive;
   font-size: 1.4rem;
   font-weight: bold;
   margin-right: 1.3rem;
