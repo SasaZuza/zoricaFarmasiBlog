@@ -10,8 +10,8 @@ import {
 // Images for Carousel slide
 import profileImg from "../profileImg/profileImg.jpg"
 import profileImg2 from "../profileImg/profileImg2.jpg"
-import profileImg3a from "../profileImg/profileImg3a.jpg"
-import profileImg4 from "../profileImg/profileImg4.jpg"
+// import profileImg3a from "../profileImg/profileImg3a.jpg"
+// import profileImg4 from "../profileImg/profileImg4.jpg"
 
 import indexStyles from "../pages/index.module.scss"
 
@@ -21,12 +21,6 @@ const items = [
   },
   {
     src: profileImg2,
-  },
-  {
-    src: profileImg3a,
-  },
-  {
-    src: profileImg4,
   },
 ]
 

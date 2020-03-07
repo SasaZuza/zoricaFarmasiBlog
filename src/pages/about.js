@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import Sidebar from "../components/sidebar"
-import Testemonials from "../components/testemonials"
+// import Testemonials from "../components/testemonials"
 
 import aboutStyles from "./about.module.scss"
 import indexStyles from "./index.module.scss"
@@ -25,7 +25,7 @@ const AboutPage = () => {
           <p className={aboutStyles.aboutMe}>
             Živim u Bijeljini, diplomirala sam ekonomiju, ali uvijek sam voljela
             da nešto "petljam" oko kozmetike i šminkanja. Između ostalog,
-            aktivno se bavim i prodajom Farmasi kozmetike. <br />
+            aktivno se bavim i prodajom Avon kozmetike. <br />
             <br />
             Znanje je najbolja investicija, zato smatram da treba biti svestran
             i pronaći neki hobi koji će nas učiniti srećnim, okupirati naše
@@ -33,11 +33,11 @@ const AboutPage = () => {
             <br />
           </p>
 
-          <p className={aboutStyles.aboutMe}>
+          {/* <p className={aboutStyles.aboutMe}>
             Evo i nekoliko komentara drugih o mom blogu:
           </p>
 
-          <Testemonials />
+          <Testemonials /> */}
 
           <img src={arrows} className={aboutStyles.gifPic} alt="About Me GIF" />
 

@@ -12,11 +12,11 @@ const Sidebar = () => {
       <Card className={indexStyles.catalogBox}>
         <CardTitle className={indexStyles.titleText}>
           {" "}
-          Pogledajte FARMASI katalog{" "}
+          Pogledajte AVON katalog{" "}
         </CardTitle>
 
         <a
-          href="https://www.farmasi.ba/index.php/decembar#minebook/1"
+          href="https://ba.avon-brochure.com/campaign/index.html?fbclid=IwAR15dSN-vjolYGNrf46GtC9xDtNrzZDweido4Ue3H2FM9TtD47YX1zT4pJ4#page/1"
           rel="noopener noreferrer"
           target="_blank"
         >

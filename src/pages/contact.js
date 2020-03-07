@@ -26,7 +26,7 @@ const ContactPage = () => {
 
           <p className={contactStyles.order}>
             Najbolji način da me kontaktirate kao i da postavite bilo koje
-            pitanje u vezi Farmasi proizvoda, te izvršite narudžbu je putem
+            pitanje u vezi Avon proizvoda, te izvršite narudžbu je putem
             Facebooka ili Instagrama i to klikom na jedno od dugmadi ispod:
           </p>
 

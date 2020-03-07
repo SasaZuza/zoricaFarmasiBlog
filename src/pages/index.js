@@ -34,7 +34,7 @@ const IndexPage = () => {
           <img src={farmasiLogo} className={indexStyles.logo} alt="Logo" />
 
           <p className={indexStyles.contactText}>
-            Farmasi je kompanija koja nudi širok asortiman proizvoda, a ja ću se
+            Avon je kompanija koja nudi širok asortiman proizvoda, a ja ću se
             potruditi da vam ih približim sa ciljem da i vi saznate zašto je ova
             kozmetika postala toliko popularna. <br />
             <img
@@ -43,7 +43,7 @@ const IndexPage = () => {
               alt="Products"
             />
             <br />
-            Želite da saznate više o Farmasi proizvodima i izvršite narudžbu?{" "}
+            Želite da saznate više o Avon proizvodima i izvršite narudžbu?{" "}
             <br />
             <Link to="/contact" className={indexStyles.contactLink}>
               Kontaktirajte me!
