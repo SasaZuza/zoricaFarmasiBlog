@@ -27,9 +27,15 @@ const AboutPage = () => {
             da nešto "petljam" oko kozmetike i šminkanja. Između ostalog,
             aktivno se bavim i prodajom Avon kozmetike. <br />
             <br />
-            Znanje je najbolja investicija, zato smatram da treba biti svestran
-            i pronaći neki hobi koji će nas učiniti srećnim, okupirati naše
-            misli i smanjiti nivo stresa, jer toga danas sigurno ima na pretek.{" "}
+            Kad god me neko vidi uživo, kaže mi da izgledam dosta mlađe.
+            Izgledati malo mlađe mi je okej ali ja sam napunila 27 godina, a svi
+            misle da sam tek srednju školu završila. Tako da, ponosni sam
+            vlasnik baby face-a. <br />
+            <br />
+            Ovaj blog se zasniva na mom iskustvu ali svakako bih voljela da
+            čujem i tvoje mišljenje, tako da očekujem da ćeš i ti učestvovati i
+            podijeliti svoje mišljenje i utiske. Drago mi je što si tu i što smo
+            se upoznale.
             <br />
           </p>
 

@@ -17,7 +17,7 @@ export default function SocialFollow() {
       </a>
 
       <a
-        href="https://www.instagram.com/dnevnik_sminkoholicarke/"
+        href="https://www.instagram.com/dnevnik_sminkoholicarke_/?fbclid=IwAR2U2m4Ukoug43RGRnKJi5UnIw-tNHHuVmARWZxNEfXylMGPpHIOAxl4Xc0"
         target="_blank"
         rel="noopener noreferrer"
         className={socialStyles.instagramSocial}
