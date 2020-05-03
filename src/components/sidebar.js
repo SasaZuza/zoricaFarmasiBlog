@@ -16,7 +16,7 @@ const Sidebar = () => {
         </CardTitle>
 
         <a
-          href="https://ba.avon-brochure.com/campaign/?fbclid=IwAR0pIA3ZgV-6UPJfnlZamX-1e9jABYEnSewN_ZeHEEZRFIR55vnw9bfsp64#page/1"
+          href="https://ba.avon-brochure.com/campaign/?fbclid=IwAR0ChbpjY_Bpnswz7fRYLWY5W2x45rRHPPYn3VOGNQDSxfUxzXKWF8eIY84#page/1"
           rel="noopener noreferrer"
           target="_blank"
         >
